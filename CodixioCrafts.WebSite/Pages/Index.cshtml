@@ -1,0 +1,15 @@
+﻿@page
+@using CodixioCrafts.WebSite.Components
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Codixio Crafts</h1>
+    <p>Project focus: ASP.NET Core, JSON, API, Razor, Blazor, Bootstrap 5, Font Awesome 6 and Azure.</p>
+</div>
+
+@(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+<script src="_framework/blazor.server.js"></script>
